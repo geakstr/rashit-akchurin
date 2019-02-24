@@ -4,14 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch poems/** --watch styles.css --watch template.html ./build.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Rashit Akchurin",
+  "license": "Rashit Akchurin ©",
   "dependencies": {
     "markdown-it": "^8.4.2"
   },
   "devDependencies": {
-    "@types/markdown-it": "0.0.7"
+    "@types/markdown-it": "0.0.7",
+    "nodemon": "^1.18.10"
   }
 }
