@@ -1,8 +1,23 @@
-const markdownit = require("markdown-it")();
 const fs = require("fs");
+const markdownit = require("markdown-it")();
 
-const template = fs.readFileSync("./template.html", { encoding: "utf8" });
-const md = fs.readFileSync("./poems/v-nenastie.md", { encoding: "utf8" });
-const html = markdownit.render(md);
-const index = template.replace("$$$$$CONTENT$$$$$", html);
-fs.writeFileSync("./index.html", index, { encoding: "utf8" });
+const readFile = path => {
+  return fs.readFileSync(path, { encoding: "utf8" });
+};
+
+const writeFile = (path, data) => {
+  return fs.writeFileSync(path, data, { encoding: "utf8" });
+};
+
+const readJsonFile = path => {
+  return JSON.parse(readFile(path));
+};
+
+const poems = readJsonFile("./order.json").reduce((html, title) => {
+  return html + "\n" + markdownit.render(readFile(`./poems/${title}.md`));
+}, "");
+
+writeFile(
+  "./index.html",
+  readFile("./template.html").replace("$$$$$CONTENT$$$$$", poems)
+);
