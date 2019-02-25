@@ -5,7 +5,7 @@
 }
 
 body {
-  max-width: 640px;
+  max-width: 800px;
   margin: 30px auto;
   padding: 0 20px;
   background-color: #fffff8;
@@ -14,8 +14,67 @@ body {
   color: #111111;
 }
 
-pre {
-  margin-top: 40px;
+.vcard {
   font-size: 18px;
   line-height: 24px;
+}
+
+.vcard h1 {
+  text-align: center;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 22px;
+}
+
+.vcard p {
+  margin-bottom: 11px;
+}
+
+.vcard p:last-child {
+  margin-bottom: 0;
+}
+
+.poems {
+  display: block;
+  max-width: 480px;
+  margin: 33px auto 0 auto;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.poems h2 {
+  margin-bottom: 22px;
+  font-size: 22px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.poems h3 {
+  margin-bottom: 11px;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.poems article {
+  overflow: auto;
+}
+
+.poems article p {
+  white-space: pre;
+  margin-bottom: 15px;
+}
+
+.poems article p:last-child {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 800px) {
+  .poems article {
+    margin: 0;
+  }
+
+  .poems article p {
+    left: 0;
+  }
 }

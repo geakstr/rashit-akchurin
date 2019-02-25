@@ -14,7 +14,8 @@ const readJsonFile = path => {
 };
 
 const poems = readJsonFile("./order.json").reduce((html, title) => {
-  return html + "\n" + markdownit.render(readFile(`./poems/${title}.md`));
+  const poem = markdownit.render(readFile(`./poems/${title}.md`));
+  return html + "\n" + `<article>${poem}</article>`;
 }, "");
 
 writeFile(
