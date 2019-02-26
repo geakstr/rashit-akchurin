@@ -58,6 +58,7 @@ body {
 
 .poems article {
   overflow: auto;
+  margin-bottom: 40px;
 }
 
 .poems article p {
