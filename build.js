@@ -13,10 +13,12 @@ const readJsonFile = path => {
   return JSON.parse(readFile(path));
 };
 
-const poems = readJsonFile("./order.json").reduce((html, title) => {
-  const poem = markdownit.render(readFile(`./poems/${title}.md`));
-  return html + "\n" + `<article>${poem}</article>`;
-}, "");
+// const poems = readJsonFile("./order.json").reduce((html, title) => {
+//   const poem = markdownit.render(readFile(`./poems/${title}.md`));
+//   return html + "\n" + `<article>${poem}</article>`;
+// }, "");
+
+const poems =  markdownit.render(readFile(`./poems.md`));
 
 writeFile(
   "./index.html",

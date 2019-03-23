@@ -50,32 +50,31 @@ body {
 }
 
 .poems h3 {
-  margin-bottom: 11px;
   font-size: 20px;
   line-height: 24px;
   text-align: center;
 }
 
-.poems article {
+.poems pre {
   overflow: auto;
   margin-bottom: 40px;
 }
 
-.poems article p {
+.poems p {
   white-space: pre;
   margin-bottom: 15px;
 }
 
-.poems article p:last-child {
+.poems p:last-child {
   margin-bottom: 0px;
 }
 
 @media (max-width: 800px) {
-  .poems article {
+  .poems {
     margin: 0;
   }
 
-  .poems article p {
+  .poems p {
     left: 0;
   }
 }
