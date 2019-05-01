@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --watch poems --watch styles.css --watch template.html --watch order.json ./build.js"
+    "start": "nodemon --watch poems.md --watch styles.css --watch template.html  ./build.js"
   },
   "author": "Rashit Akchurin",
   "license": "Rashit Akchurin ©",
